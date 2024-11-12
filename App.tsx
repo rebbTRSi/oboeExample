@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import NativeOboeModule from './oboetm/NativeOboeModule';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -57,7 +59,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
+  NativeOboeModule?.initOboe();
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };

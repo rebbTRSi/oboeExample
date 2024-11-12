@@ -36,5 +36,13 @@
   "engines": {
     "node": ">=18"
   },
+  "codegenConfig": {
+    "name": "NativeOboe",
+    "type": "all",
+    "jsSrcsDir": "oboetm",
+    "android": {
+      "javaPackageName": "com.facebook.fbreact.specs"
+    }
+  },
   "packageManager": "yarn@3.6.4"
 }
